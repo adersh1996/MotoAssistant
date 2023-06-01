@@ -142,11 +142,23 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/pass_info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_box_three"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="@string/password_info"
+                android:padding="5dp"/>
             <LinearLayout
                 android:id="@+id/et_box_four"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/et_box_three"
+                android:layout_below="@id/pass_info_text"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
                 android:orientation="horizontal"

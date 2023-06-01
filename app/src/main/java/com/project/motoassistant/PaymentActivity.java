@@ -26,6 +26,7 @@ public class PaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
 
         payBt = findViewById(R.id.pay_btn);
+
         String amount = getIntent().getStringExtra("amount");
         String userId = getIntent().getStringExtra("userId");
         String requestId = getIntent().getStringExtra("requestId");

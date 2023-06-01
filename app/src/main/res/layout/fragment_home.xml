@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.user.user_home.HomeFragment">
 
     <RelativeLayout
         android:id="@+id/toolbar"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/welcome_txt"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Adersh kumar"
+            tools:text="Adersh kumar"
             android:textSize="14sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView

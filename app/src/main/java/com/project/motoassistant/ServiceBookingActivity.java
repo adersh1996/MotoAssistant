@@ -1,5 +1,6 @@
 package com.project.motoassistant;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -146,7 +147,9 @@ public class ServiceBookingActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Root root = response.body();
                     if (root.status) {
-                        Toast.makeText(ServiceBookingActivity.this, root.message, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ServiceBookingActivity.this, "Service Booked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ServiceBookingActivity.this, HomeActivity.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(ServiceBookingActivity.this, root.message, Toast.LENGTH_SHORT).show();
                     }

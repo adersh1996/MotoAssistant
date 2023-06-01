@@ -76,4 +76,67 @@ public interface APIInterface {
                                    @Part("address") RequestBody address,
                                    @Part MultipartBody.Part image,
                                    @Part("userid") RequestBody userId);
+
+    @GET("logout.php")
+    Call<Root> LOGOUT_API_CALL(@Query("userid") String userId);
+
+    @Multipart
+    @POST("seller_registration.php")
+    Call<Root> SELLER_REG_API(@Part("name") RequestBody name,
+                              @Part("email") RequestBody email,
+                              @Part("phone") RequestBody phone,
+                              @Part("password") RequestBody password,
+                              @Part("address") RequestBody address,
+                              @Part("district") RequestBody district,
+                              @Part("state") RequestBody state,
+                              @Part MultipartBody.Part licenseImage);
+
+    @GET("seller_login.php")
+    Call<Root> SELLER_LOGIN_API(@Query("phone") String phone,
+                                @Query("password") String password);
+
+    @GET("view_product_bysellerid.php")
+    Call<Root> SELLER_PRODUCT_LIST_API(@Query("seller_id") String sellerId);
+
+    @GET("delete_product.php")
+    Call<Root> SELLER_DELETE_PRODUCT(@Query("product_id") String productId);
+
+    @GET("order_product_history_byseller.php")
+    Call<Root> SELLER_ORDER_HISTORY_API(@Query("seller_id") String sellerId);
+
+    @GET("view_seller_profile.php")
+    Call<Root> SELLER_PROFILE(@Query("seller_id") String sellerId);
+
+    @Multipart
+    @POST("edit_seller_profile.php")
+    Call<Root> UPDATE_SELLER_PROFILE(@Part("name") RequestBody name,
+                                     @Part("email") RequestBody email,
+                                     @Part("phone") RequestBody phone,
+                                     @Part("address") RequestBody address,
+                                     @Part MultipartBody.Part image,
+                                     @Part("seller_id") RequestBody sellerId);
+
+    @Multipart
+    @POST("add_product.php")
+    Call<Root> SELLER_ADD_PRODUCT(@Part("product_name") RequestBody productName,
+                                  @Part("mrp") RequestBody mrp,
+                                  @Part("price") RequestBody sellingPrice,
+                                  @Part("quantity") RequestBody quantity,
+                                  @Part("description") RequestBody description,
+                                  @Part MultipartBody.Part image,
+                                  @Part("seller_id") RequestBody sellerId);
+
+    @GET("view_productbyUser.php")
+    Call<Root> VIEW_PRODUCT_USER_API_CALL();
+
+    @GET("buy_product.php")
+    Call<Root> BUY_PRODUCT_USER(@Query("product_id") String productId,
+                                @Query("quantity") String quantity,
+                                @Query("shipping_address") String shippingAddress,
+                                @Query("user_id") String userId);
+
+    @GET("order_product_history_byuser.php")
+    Call<Root> USER_PRODUCT_ORDER_HISTORY(@Query("user_id") String userId);
+
+
 }

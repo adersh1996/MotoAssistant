@@ -8,4 +8,5 @@
         <br>require</br>
         </string>
     <string name="services_repairs_txt"><![CDATA[SERVICES & REPAIRS]]></string>
+    <string name="password_info">Password should contain uppercase, lowercase, number,atleast one special character</string>
 </resources>

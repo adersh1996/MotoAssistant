@@ -12,5 +12,13 @@ public class Root {
     public ArrayList<OrderHistory> orderHistory;
     public ArrayList<ReviewDetail> reviewDetails;
 
+    public ArrayList<SellerDetail> sellerDetails;
+    public ArrayList<ProductDetail> productDetails;
+    public ArrayList<OrderDetail> orderDetails;
+
+
+
+
+
 
 }

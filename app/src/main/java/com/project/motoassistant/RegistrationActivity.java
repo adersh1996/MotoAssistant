@@ -35,6 +35,7 @@ import com.mobsandgeeks.saripaar.ValidationError;
 import com.mobsandgeeks.saripaar.Validator;
 import com.mobsandgeeks.saripaar.annotation.ConfirmPassword;
 import com.mobsandgeeks.saripaar.annotation.Email;
+import com.mobsandgeeks.saripaar.annotation.Length;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 import com.mobsandgeeks.saripaar.annotation.Password;
 import com.mobsandgeeks.saripaar.annotation.Pattern;
@@ -74,8 +75,9 @@ public class RegistrationActivity extends AppCompatActivity implements Validator
 
     private LinearLayout etBoxTwo;
 
-    @NotEmpty
-    @Pattern(regex = "^[7-9][0-9]{9}$", message = "Invalid Mobile Number")
+   // @Pattern(regex = "^[7-9][0-9]{9}$", message = "Invalid Mobile Number")
+   @NotEmpty
+   @Length(max = 10, min = 10, message = "Enter a valid mobile number")
     private TextInputEditText phoneNumberEt;
 
     private LinearLayout etBoxThree;

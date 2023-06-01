@@ -16,11 +16,45 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MotoAssistant"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".UserProductOrderHistoryDetails"
+            android:exported="false" />
+        <activity
+            android:name=".UserProductPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProductDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SellerAddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.seller.seller.seller_order.SellerOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SellerProductDetails"
+            android:exported="false" />
+        <activity
+            android:name=".SellerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SellerRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ServiceBookingActivity"
             android:exported="false" />
@@ -41,13 +75,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

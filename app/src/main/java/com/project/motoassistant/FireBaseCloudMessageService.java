@@ -140,12 +140,12 @@ public class FireBaseCloudMessageService extends FirebaseMessagingService {
             JSONObject object = new JSONObject(params);
             {
 
-                title = "Request Accepted";
-                message = "Staff Name" + object.getString("Staff_name");
+                title = "Request "+object.getString("status");
+                message = "Staff Name " + object.getString("Staff_name");
                 Notify.build(this)
                         .setTitle(title)
                         .setContent(message)
-                        //  .setSmallIcon(R.drawable.sample_pro_pic)
+                        .setSmallIcon(R.drawable.notification_logo)
                         // .setLargeIcon(img)
                         .largeCircularIcon()
                         // .setPicture()

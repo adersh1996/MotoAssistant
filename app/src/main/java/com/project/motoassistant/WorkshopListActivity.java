@@ -85,12 +85,13 @@ public class WorkshopListActivity extends AppCompatActivity {
 
         serivceId = getIntent().getStringExtra("service_id");
         serviceName = getIntent().getStringExtra("service_name");
-/*
+      /*
       TODO change hardcoded lat and long
         apiCall(serivceId, String.valueOf(latitude), String.valueOf(longitude));
       */
         //Toast.makeText(this, serivceId, Toast.LENGTH_SHORT).show();
-        apiCall(serivceId, "8.9154", "77.0457");
+        apiCall(serivceId,String.valueOf(latitude) , String.valueOf(longitude));
+
     }
 
     public void apiCall(String serviceId, String latitude, String longitude) {
@@ -138,7 +139,7 @@ public class WorkshopListActivity extends AppCompatActivity {
                     }
                 });
                 snackbar.show();
-                //  Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

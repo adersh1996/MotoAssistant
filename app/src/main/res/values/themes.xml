@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MotoAssistant" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MotoAssistant" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!--status bar icon color grey -->
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <!-- Primary brand color. -->

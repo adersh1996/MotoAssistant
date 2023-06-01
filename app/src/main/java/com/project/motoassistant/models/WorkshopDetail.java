@@ -12,7 +12,7 @@ public class WorkshopDetail {
     public String password;
     public String file;
     public String distance;
-    public int rat_percentage;
+    public double rat_percentage;
     public double workshop_rating;
     public int no_of_rating;
     public String created_at;
